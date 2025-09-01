@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: pyrattler-recipe-autogen
-  version: '0.10.5'
+  version: "0.10.6"
 
 package:
   name: ${{ name }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyrattler_recipe_autogen-${{ version }}.tar.gz
-  sha256: f12d5d655f25eed5aa8e41e769be414c903d65fe842c25ef51a88f4d873a641f
+  sha256: 0f046e7cc7d4064aae0b642b28313ce3ea06bed2aa82c3312ccc8b4996498496
 
 build:
   number: 0
@@ -23,17 +23,17 @@ build:
 
 requirements:
   host:
-  - python ${{ python_min }}.*
-  - pip
-  - hatchling
-  - hatch-vcs
+    - python ${{ python_min }}.*
+    - pip
+    - hatchling
+    - hatch-vcs
   run:
-  - python >=${{ python_min }},<4
-  - pyyaml
-  - toml
-  - tomli
-  - types-toml
-  - types-PyYAML
+    - python >=${{ python_min }},<4
+    - pyyaml
+    - toml
+    - tomli
+    - types-toml
+    - types-PyYAML
 
 tests:
   - python:
